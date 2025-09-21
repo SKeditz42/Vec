@@ -1,4 +1,5 @@
-# Vec — A Generic Vector for C
+# 🌀 Vec
+## A Generic Vector for C
 
 Vec is a generic, fast, leak‑safe dynamic array for C. It stores elements contiguously, grows geometrically (×2) for amortized O(1) push, and offers a method‑style API that feels natural if you like object syntax in C. The library is defensive by default: overflow guards before allocations, bounds‑checked accessors, and well‑defined behavior for empty/shrink/destroy.
 
