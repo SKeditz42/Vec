@@ -150,6 +150,20 @@ static void test_reserve_success(void) {
     vec_destroy(&v);
 }
 
+static void test_push_overflow_guard_on_growth(void) {
+    // Choose elem_size=8 and capacity so that doubling would overflow bytes
+    Vec v = vec_new(8);
+    v.capacity = (SIZE_MAX / 8) - 1; // doubling would exceed SIZE_MAX/elem_size
+    v.len = v.capacity;              // force growth path
+    errno = 0;
+    int x = 42;
+    void *p = vec_push(&v, &x);
+    EXPECT_TRUE(p == NULL);
+    EXPECT_EQ_INT(errno, ENOMEM);
+    EXPECT_EQ_ULL(v.len, v.capacity); // unchanged on failure
+    vec_destroy(&v);
+}
+
 int main(void) {
     RUN_TEST(test_shrink_on_empty);
     RUN_TEST(test_pop_on_empty);
@@ -161,6 +175,7 @@ int main(void) {
     RUN_TEST(test_remove_and_clear);
     RUN_TEST(test_reserve_success);
     RUN_TEST(test_iterators);
+    RUN_TEST(test_push_overflow_guard_on_growth);
 
     return test_summary("vec");
 }

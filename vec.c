@@ -34,9 +34,15 @@ void *vec_push(Vec *v, const void *elem)
         {
             new_cap = 1;
         }
-        else if (v->capacity > SIZE_MAX / 2)
+        else if (v->elem_size != 0 && v->capacity > SIZE_MAX / 2 / v->elem_size)
         {
-            new_cap = (v->elem_size == 0) ? 0 : (SIZE_MAX / v->elem_size);
+            errno = ENOMEM;
+            perror("push capacity overflow");
+            return NULL;
+        }
+        else if (v->elem_size == 0 && v->capacity > SIZE_MAX / 2)
+        {
+            new_cap = 0;
         }
         else
         {
